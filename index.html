@@ -18,7 +18,6 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Paleta primavera / flores amarillas */
       --sun:      #f5c518;
       --sun-dk:   #c49a00;
       --sun-lt:   #fde97a;
@@ -28,7 +27,6 @@
       --leaf-lt:  #b8e6b8;
       --petal:    #ff9f43;
       --sky:      #74c7ec;
-      /* mantener compatibilidad con vars originales */
       --rose:     #c2566b;
       --rose-dk:  #8a2a3e;
       --rose-lt:  #e8a0b2;
@@ -41,7 +39,6 @@
       --gold-lt:  #fde88a;
     }
 
-    /* ── ANIMACIONES ── */
     @keyframes fadeUp {
       from { opacity:0; transform:translateY(26px); }
       to   { opacity:1; transform:translateY(0); }
@@ -92,7 +89,6 @@
       color:var(--dark); min-height:100vh; overflow-x:hidden;
     }
 
-    /* ── PÉTALOS AMARILLOS ── */
     .petal {
       position:fixed; pointer-events:none; z-index:0;
       animation:petalFall linear infinite; opacity:0; user-select:none;
@@ -101,7 +97,6 @@
 
     .page { position:relative; z-index:1; max-width:480px; margin:0 auto; padding-bottom:100px; }
 
-    /* ── HERO ── */
     .hero {
       position:relative; text-align:center;
       padding:48px 28px 40px; overflow:hidden;
@@ -120,7 +115,6 @@
       content:''; position:absolute; inset:0;
       background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1.2' fill='%23f5c518' fill-opacity='0.12'/%3E%3C/svg%3E") repeat;
     }
-    /* arcos verdes en vez de rosas */
     .hero-arc { position:absolute; border-radius:50%; pointer-events:none; }
     .hero-arc-1 { width:340px; height:340px; top:-120px; left:50%; transform:translateX(-50%); border:1px solid rgba(90,170,90,.15); }
     .hero-arc-2 { width:220px; height:220px; top:-40px;  left:50%; transform:translateX(-50%); border:1px solid rgba(245,197,24,.2); }
@@ -154,7 +148,6 @@
       margin:22px auto 0; border-radius:3px;
     }
 
-    /* ── CONTENT ── */
     .content { padding:10px 20px 0; }
 
     .section { margin-bottom:26px; animation:fadeUp .7s ease both; }
@@ -163,7 +156,6 @@
     .section:nth-child(3){animation-delay:.30s}
     .section:nth-child(4){animation-delay:.40s}
 
-    /* ── WORLD LABEL ── */
     .world-label { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
     .world-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,rgba(245,197,24,.5),transparent); }
     .world-pill {
@@ -180,7 +172,6 @@
     }
     .world-subtitle { font-size:.72rem; color:var(--muted); font-weight:400; text-align:center; margin-bottom:14px; letter-spacing:.02em; }
 
-    /* ── ROSE CARD → YELLOW FLOWER CARD ── */
     .rose-card {
       border-radius:22px; overflow:hidden;
       background:linear-gradient(135deg, #fffbe0, #fffff0, #f0ffe8);
@@ -200,7 +191,6 @@
     .rb-rose  { background:linear-gradient(135deg,#fff3b0,#fde766); }
     .rb-green { background:linear-gradient(135deg,#d4f5d4,#a8e6a8); }
 
-    /* ── KIT CARD → GREEN EMPRENDEDORA CARD ── */
     .kit-card {
       border-radius:22px; overflow:hidden;
       background:linear-gradient(135deg, #e8ffe8, #f5fff5, #fffbe0);
@@ -220,6 +210,7 @@
       border-radius:14px; padding:13px 16px; text-decoration:none; color:var(--dark);
       transition:background .2s, transform .15s;
       box-shadow:0 2px 10px rgba(90,170,90,.1);
+      cursor:pointer;
     }
     .kit-btn:hover  { background:rgba(255,255,255,.97); transform:translateX(3px); }
     .kit-btn:active { transform:scale(.98); }
@@ -232,7 +223,6 @@
     .kit-btn-text span   { display:block; font-size:.7rem; color:var(--muted); }
     .kit-btn-arrow { color:var(--leaf); font-size:1.2rem; }
 
-    /* ── COMMUNITY CARD ── */
     .community-card {
       border-radius:22px; overflow:hidden;
       background:linear-gradient(135deg, #fffbe0, #fffff5, #e8ffe8);
@@ -253,7 +243,6 @@
     }
     .community-btn:hover { transform:translateY(-2px); box-shadow:0 10px 30px rgba(245,197,24,.55); }
 
-    /* ── SOCIAL ── */
     .social-row { display:flex; gap:10px; margin-top:12px; }
     .social-btn {
       flex:1; display:flex; align-items:center; justify-content:center; gap:7px;
@@ -283,18 +272,16 @@
     }
     .sb-fb:hover { box-shadow:0 6px 20px rgba(212,168,0,.22); }
 
-    /* ── FOOTER ── */
     .footer { text-align:center; padding:24px 20px 0; font-size:.7rem; color:var(--muted); line-height:1.8; animation:fadeUp .6s .5s ease both; }
     .footer .heart { color:var(--sun); }
     .footer strong { color:#5a3e00; }
 
-    /* ── WA FLOAT ── */
     .wa-float {
       position:fixed; bottom:24px; right:20px;
       width:56px; height:56px; border-radius:50%;
       background:#25d366; display:flex; align-items:center; justify-content:center;
       font-size:1.65rem; box-shadow:0 6px 24px rgba(37,211,102,.45);
-      text-decoration:none; z-index:200;
+      text-decoration:none; z-index:200; cursor:pointer;
       transition:transform .2s, box-shadow .2s;
       animation:fadeUp .5s .7s ease both;
     }
@@ -318,7 +305,6 @@
 <body>
 
 <script>
-  /* Pétalos primaverales amarillos */
   const petals = ['🌼','🌻','✿','💛','🌿','🍃','🌾'];
   for (let i = 0; i < 18; i++) {
     const el = document.createElement('span');
@@ -327,13 +313,10 @@
     el.style.cssText = `left:${Math.random()*100}%;font-size:${0.55+Math.random()*.8}rem;animation-duration:${7+Math.random()*10}s;animation-delay:${Math.random()*10}s;`;
     document.body.appendChild(el);
   }
-
-
 </script>
 
 <div class="page">
 
-  <!-- ── HERO ── -->
   <header class="hero">
     <div class="hero-bg"></div>
     <div class="hero-arc hero-arc-1"></div>
@@ -354,9 +337,7 @@
 
   <main class="content">
 
-    <!-- ════════════════════════════════
-         🌹 MUNDO 1: PARA REGALAR
-    ════════════════════════════════ -->
+    <!-- ════ MUNDO 1: PARA REGALAR ════ -->
     <section class="section">
       <div class="world-label">
         <div class="world-line"></div>
@@ -377,7 +358,7 @@
           </div>
         </div>
         <div class="kit-btns">
-          <a href="https://api.whatsapp.com/send?phone=51900900712&text" class="kit-btn">
+          <a onclick="abrirWhatsApp('')" class="kit-btn">
             <div class="kit-btn-icon rb-rose">🌼</div>
             <div class="kit-btn-text">
               <strong>Pedir mi ramo</strong>
@@ -385,7 +366,7 @@
             </div>
             <span class="kit-btn-arrow">›</span>
           </a>
-          <a href="https://api.whatsapp.com/send?phone=51900900712&text" class="kit-btn">
+          <a onclick="abrirWhatsApp('')" class="kit-btn">
             <div class="kit-btn-icon rb-green">🌻</div>
             <div class="kit-btn-text">
               <strong>Pedir mi ramo</strong>
@@ -397,9 +378,7 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         🌟 MUNDO 2: EMPIEZA TU NEGOCIO
-    ════════════════════════════════ -->
+    <!-- ════ MUNDO 2: EMPIEZA TU NEGOCIO ════ -->
     <section class="section">
       <div class="world-label">
         <div class="world-line"></div>
@@ -421,7 +400,7 @@
         </div>
         <div class="kit-btns">
           <!-- KIT INICIAL - descomentar cuando se necesite
-          <a href="https://wa.me/51956744914?text=Hola!%20Me%20interesa%20el%20kit%20inicial%20para%20emprender%20con%20rosas%20eternas%20%F0%9F%8C%B9" class="kit-btn">
+          <a onclick="abrirWhatsApp('Hola!%20Me%20interesa%20el%20kit%20inicial%20para%20emprender%20con%20rosas%20eternas%20%F0%9F%8C%B9')" class="kit-btn">
             <div class="kit-btn-icon kb-gold">🎁</div>
             <div class="kit-btn-text">
               <strong>Comprar kit inicial</strong>
@@ -430,7 +409,7 @@
             <span class="kit-btn-arrow">›</span>
           </a>
           -->
-          <a href="https://api.whatsapp.com/send?phone=51900900712&text" class="kit-btn">
+          <a onclick="abrirWhatsApp('')" class="kit-btn">
             <div class="kit-btn-icon kb-green">🌿</div>
             <div class="kit-btn-text">
               <strong>Solo materiales</strong>
@@ -442,9 +421,7 @@
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         🌸 MUNDO 3: PARA APRENDER
-    ════════════════════════════════ -->
+    <!-- ════ MUNDO 3: PARA APRENDER ════ -->
     <section class="section">
       <div class="world-label">
         <div class="world-line"></div>
@@ -460,13 +437,11 @@
         <span class="community-icon">🌻</span>
         <p class="community-title">Únete a nuestra comunidad</p>
         <p class="community-desc">Un grupo especial para emprendedoras como tú.<br>Comparte, aprende y crece con nosotras. <strong>¡Es gratis!</strong></p>
-        <a href="https://api.whatsapp.com/send?phone=51956744914&text=Hola!%20Quiero%20unirme%20a%20la%20comunidad%20de%20rosas%20eternas%20%F0%9F%8C%B9%20%C2%BFMe%20pueden%20agregar%20al%20grupo%3F" class="community-btn">🌼 Quiero unirme</a>
+        <a href="https://chat.whatsapp.com/CMHPDhzzyfnKDMrn21aZUr" class="community-btn">🌼 Quiero unirme</a>
       </div>
     </section>
 
-    <!-- ════════════════════════════════
-         REDES SOCIALES (al final)
-    ════════════════════════════════ -->
+    <!-- ════ REDES SOCIALES ════ -->
     <section class="section">
       <div class="world-label">
         <div class="world-line"></div>
@@ -498,7 +473,19 @@
   </main>
 </div>
 
-<a href="https://api.whatsapp.com/send?phone=51900900712&text" class="wa-float">💬</a>
+<!-- Botón flotante WhatsApp -->
+<span onclick="abrirWhatsApp('')" class="wa-float">💬</span>
+
+<!-- ⭐ Truco PRO WhatsApp: intenta abrir la app, si falla abre wa.me -->
+<script>
+  function abrirWhatsApp(texto) {
+    var numero = '51956744914';
+    window.location.href = 'whatsapp://send?phone=' + numero + '&text=' + texto;
+    setTimeout(function() {
+      window.location.href = 'https://wa.me/' + numero + '?text=' + texto;
+    }, 1500);
+  }
+</script>
 
 </body>
 </html>
