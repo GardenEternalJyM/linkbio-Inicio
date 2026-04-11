@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ramos con Cinta Satinada — Expresiones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+</head>
+<body>
+
+<script>
+['🌸','🌷','🪷','💗','🌺'].forEach(p=>{for(let j=0;j<2;j++){const el=document.createElement('span');el.className='petal';el.textContent=p;el.style.cssText=`left:${Math.random()*100}%;font-size:${.4+Math.random()*.5}rem;animation-duration:${9+Math.random()*10}s;animation-delay:${Math.random()*14}s;`;document.body.appendChild(el);}});
+</script>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logoE.png" alt="Expresiones"/></a>
+  <div class="nav-links">
+    <a href="ramos-cinta.html" data-page="cinta">Cinta satinada</a>
+    <a href="ramos-limpiapipas.html" data-page="pipas">Limpiapipas</a>
+    <a href="boxes.html" data-page="boxes">Boxes</a>
+    <a href="peluches.html" data-page="peluches">Peluches</a>
+    <a href="ramos-peluche.html" data-page="ramo-peluche">Ramo + Peluche</a>
+    <a onclick="abrirWA('Hola!%20Quiero%20hacer%20un%20pedido%20en%20Expresiones%20%F0%9F%8C%B8')" href="#" class="nav-cta">Pedir ahora</a>
+  </div>
+  <button class="nav-burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="ramos-cinta.html" data-page="cinta" onclick="closeMob()">Cinta satinada</a>
+  <a href="ramos-limpiapipas.html" data-page="pipas" onclick="closeMob()">Limpiapipas</a>
+  <a href="boxes.html" data-page="boxes" onclick="closeMob()">Boxes</a>
+  <a href="peluches.html" data-page="peluches" onclick="closeMob()">Peluches</a>
+  <a href="ramos-peluche.html" data-page="ramo-peluche" onclick="closeMob()">Ramo + Peluche</a>
+  <a onclick="abrirWA('Hola!%20Quiero%20hacer%20un%20pedido%20en%20Expresiones%20%F0%9F%8C%B8');closeMob()" href="#">Pedir ahora</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <p class="page-breadcrumb"><a href="index.html">Inicio</a><span>/</span>Ramos con cinta satinada</p>
+  <h1 class="page-h1">Ramos con <em>cinta satinada</em></h1>
+  <p class="page-desc">Elegancia clásica en cada detalle. Ramos tejidos a mano con acabado en cinta satinada — el regalo atemporal que ella siempre soñó.</p>
+  <div class="page-header-rule"></div>
+</div>
+
+<!-- STRIP -->
+<div class="strip">
+  <span class="strip-item">🎀 Cinta satinada</span>
+  <span class="strip-dot"></span>
+  <span class="strip-item">✂️ Tejido a mano</span>
+  <span class="strip-dot"></span>
+  <span class="strip-item">🌷 Flores eternas</span>
+  <span class="strip-dot"></span>
+  <span class="strip-item">🎨 Colores a pedido</span>
+  <span class="strip-dot"></span>
+  <span class="strip-item">🚚 Envíos a todo Perú</span>
+</div>
+
+<!-- PRODUCTOS -->
+<section class="products" id="productos">
+  <span class="section-tag">Colección</span>
+  <h2 class="section-title">Todos nuestros <em>cinta satinada</em></h2>
+  <div class="products-grid">
+    <div class="product-card" onclick="abrirWA('Hola!%20Quiero%20el%20Ramo%20Rosa%20Cl%C3%A1sica%20de%20Expresiones%20%F0%9F%8C%B7')">
+      <div class="product-img"><img src="imagenes/cinta-01.jpg" alt="Ramo Rosa Clásica" loading="lazy"/></div>
+      <div class="product-body">
+        <p class="product-name">Ramo Rosa Clásica</p>
+        <p class="product-desc">Ramo tejido con acabado en cinta satinada rosa, el favorito de temporada</p>
+        <div class="product-footer"><span class="product-price">S/ 89</span><button class="product-btn">Pedir →</button></div>
+      </div>
+    </div>
+    <div class="product-card" onclick="abrirWA('Hola!%20Quiero%20el%20Ramo%20Burdeos%20de%20Expresiones%20%F0%9F%8C%B9')">
+      <div class="product-img"><img src="imagenes/cinta-02.jpg" alt="Ramo Burdeos Elegante" loading="lazy"/></div>
+      <div class="product-body">
+        <p class="product-name">Ramo Burdeos Elegante</p>
+        <p class="product-desc">Tonos vino y burdeos en una composición sofisticada con cinta dorada</p>
+        <div class="product-footer"><span class="product-price">S/ 99</span><button class="product-btn">Pedir →</button></div>
+      </div>
+    </div>
+    <div class="product-card" onclick="abrirWA('Hola!%20Quiero%20el%20Ramo%20Pastel%20Mix%20de%20Expresiones%20%F0%9F%8C%B8')">
+      <div class="product-img"><img src="imagenes/cinta-03.jpg" alt="Ramo Pastel Mix" loading="lazy"/></div>
+      <div class="product-body">
+        <p class="product-name">Ramo Pastel Mix</p>
+        <p class="product-desc">Mezcla de colores pastel suaves — rosado, lila y blanco roto</p>
+        <div class="product-footer"><span class="product-price">S/ 95</span><button class="product-btn">Pedir →</button></div>
+      </div>
+    </div>
+    <div class="product-card" onclick="abrirWA('Hola!%20Quiero%20el%20Ramo%20D%C3%ADa%20de%20la%20Madre%20de%20Expresiones%20%F0%9F%8C%B8')">
+      <div class="product-img"><img src="imagenes/cinta-04.jpg" alt="Ramo Día de la Madre" loading="lazy"/></div>
+      <div class="product-body">
+        <p class="product-name">Ramo Día de la Madre</p>
+        <p class="product-desc">Diseño especial para mamá: rosas y lilas con cinta satinada en V</p>
+        <div class="product-footer"><span class="product-price">S/ 109</span><button class="product-btn">Pedir →</button></div>
+      </div>
+    </div>
+    <div class="product-card" onclick="abrirWA('Hola!%20Quiero%20el%20Ramo%20Rojo%20Pasi%C3%B3n%20de%20Expresiones%20%F0%9F%8C%B9')">
+      <div class="product-img"><img src="imagenes/cinta-05.jpg" alt="Ramo Rojo Pasión" loading="lazy"/></div>
+      <div class="product-body">
+        <p class="product-name">Ramo Rojo Pasión</p>
+        <p class="product-desc">Intensidad y romanticismo en rojo profundo con cinta satinada negra</p>
+        <div class="product-footer"><span class="product-price">S/ 109</span><button class="product-btn">Pedir →</button></div>
+      </div>
+    </div>
+    <div class="product-card" onclick="abrirWA('Hola!%20Quiero%20un%20Ramo%20Personalizado%20con%20cinta%20satinada%20de%20Expresiones%20%E2%9C%A8')">
+      <div class="product-img"><img src="imagenes/cinta-06.jpg" alt="Ramo Personalizado" loading="lazy"/></div>
+      <div class="product-body">
+        <p class="product-name">Ramo Personalizado</p>
+        <p class="product-desc">Elige tus colores favoritos — lo creamos especialmente para ti</p>
+        <div class="product-footer"><span class="product-price">A consultar</span><button class="product-btn">Pedir →</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="order">
+  <div class="order-inner">
+    <span class="section-tag">¿Te gustó algo?</span>
+    <h2 class="section-title">Haz tu pedido<br><em>ahora mismo</em></h2>
+    <p class="order-desc">Escríbenos por WhatsApp, te confirmamos disponibilidad y precio en minutos. Envíos a todo el Perú.</p>
+    <div class="order-actions">
+      <a onclick="abrirWA('Hola!%20Quiero%20un%20ramo%20con%20cinta%20satinada%20de%20Expresiones%20%F0%9F%8E%80')" class="btn-primary">🌷 Pedir por WhatsApp</a>
+      <a href="index.html#categorias" class="btn-secondary">Ver más categorías</a>
+    </div>
+  </div>
+</section>
+
+<!-- OTRAS CATEGORÍAS -->
+<section class="other-cats">
+  <span class="section-tag">Explorar más</span>
+  <h2 class="section-title">También te puede<br><em>encantar</em></h2>
+  <div class="other-grid">
+    <a href="ramos-limpiapipas.html" class="other-card">
+      <div class="other-img"><img src="imagenes/pipas-cover.jpg" alt="Limpiapipas" loading="lazy"/><span style="position:relative;z-index:1">🧹</span></div>
+      <div class="other-body">
+        <p class="other-name">Limpiapipas</p>
+        <span class="other-link">Ver colección →</span>
+      </div>
+    </a>
+    <a href="boxes.html" class="other-card">
+      <div class="other-img"><img src="imagenes/box-cover.jpg" alt="Boxes" loading="lazy"/><span style="position:relative;z-index:1">📦</span></div>
+      <div class="other-body">
+        <p class="other-name">Boxes</p>
+        <span class="other-link">Ver colección →</span>
+      </div>
+    </a>
+    <a href="peluches.html" class="other-card">
+      <div class="other-img"><img src="imagenes/peluche-cover.jpg" alt="Peluches" loading="lazy"/><span style="position:relative;z-index:1">🧸</span></div>
+      <div class="other-body">
+        <p class="other-name">Peluches</p>
+        <span class="other-link">Ver colección →</span>
+      </div>
+    </a>
+    <a href="ramos-peluche.html" class="other-card">
+      <div class="other-img"><img src="imagenes/ramo-peluche-cover.jpg" alt="Ramo + Peluche" loading="lazy"/><span style="position:relative;z-index:1">🌸🧸</span></div>
+      <div class="other-body">
+        <p class="other-name">Ramo + Peluche</p>
+        <span class="other-link">Ver colección →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- REDES -->
+<section class="social-section">
+  <div class="social-inner">
+    <span class="social-label">Síguenos en redes</span>
+    <div class="social-row">
+      <a href="#" class="social-btn">🎥 TikTok</a>
+      <a href="#" class="social-btn">📷 Instagram</a>
+      <a href="#" class="social-btn">💜 Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand"><img src="logoE.png" alt="Expresiones"/></div>
+    <p class="footer-copy">Hecho con <span class="footer-love">🌷</span> y mucho amor · Perú 2026<br>Flores eternas tejidas a mano para momentos que duran para siempre.</p>
+  </div>
+  <div class="footer-right">
+    <p>🌸 ¡Feliz Día de la Madre!</p>
+    <p style="margin-top:6px">© 2026 Expresiones Florería</p>
+  </div>
+</footer>
+
+<a onclick="abrirWA('Hola!%20Quiero%20un%20ramo%20con%20cinta%20satinada%20de%20Expresiones%20%F0%9F%8E%80')" class="wa" href="#">💬<span class="wa-tip">Pedir por WhatsApp</span></a>
+
+<script>
+function abrirWA(t){
+  var n='51956744914';
+  window.location.href='whatsapp://send?phone='+n+'&text='+t;
+  setTimeout(function(){window.location.href='https://wa.me/'+n+'?text='+t},1500);
+}
+
+const burger=document.getElementById('burger'), mob=document.getElementById('navMobile');
+
+burger.addEventListener('click',()=>{
+  burger.classList.toggle('open');
+  mob.classList.toggle('open');
+});
+
+function closeMob(){
+  burger.classList.remove('open');
+  mob.classList.remove('open');
+}
+
+// Resalta el enlace activo en la navegación
+document.querySelectorAll('[data-page="cinta"]').forEach(a=>a.classList.add('active'));
+
+// Animación al hacer scroll (Sintaxis Corregida)
+document.querySelectorAll('.product-card, .other-card').forEach((el,i)=>{
+  el.style.opacity='0';
+  new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        setTimeout(()=>{
+          e.target.style.animation='fadeUp .6s ease forwards';
+          e.target.style.opacity='1';
+        }, i % 4 * 70);
+      }
+    });
+  }, {threshold: .1}).observe(el);
+});
+</script>
